@@ -1,7 +1,8 @@
 package ru.netology.stats;
 
-import org.junit.Test;
+
 import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 
 public class StatsServiceTest {
 
@@ -46,6 +47,17 @@ public class StatsServiceTest {
         int expected = 9;
 
         int actual = service.getMinMount();
+        Assertions.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void searchOverAverageSales() {
+        StatsService service = new StatsService();
+
+
+        int expected = 5;
+
+        int actual = service.getOverAverageSaleseAmount();
         Assertions.assertEquals(expected, actual);
     }
 
