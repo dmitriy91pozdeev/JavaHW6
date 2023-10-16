@@ -10,10 +10,12 @@ public class StatsServiceTest {
     public void salesAmountCalculation() {
         StatsService service = new StatsService();
 
+        int[] salese = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
+
 
         int expected = 180;
 
-        int actual = service.getSaleseAmount();
+        int actual = service.getSaleseAmount(salese);
         Assertions.assertEquals(expected, actual);
     }
 
@@ -21,10 +23,12 @@ public class StatsServiceTest {
     public void AverageSalesCalculation() {
         StatsService service = new StatsService();
 
+        int[] salese = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
+
 
         int expected = 15;
 
-        int actual = service.getAverageSaleseAmount();
+        int actual = service.getAverageSaleseAmount(salese);
         Assertions.assertEquals(expected, actual);
     }
 
@@ -32,10 +36,12 @@ public class StatsServiceTest {
     public void searchMaxSales() {
         StatsService service = new StatsService();
 
+        int[] salese = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
+
 
         int expected = 8;
 
-        int actual = service.getMaxMount();
+        int actual = service.getMaxMount(salese);
         Assertions.assertEquals(expected, actual);
     }
 
@@ -43,10 +49,12 @@ public class StatsServiceTest {
     public void searchMinSales() {
         StatsService service = new StatsService();
 
+        int[] salese = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
+
 
         int expected = 9;
 
-        int actual = service.getMinMount();
+        int actual = service.getMinMount(salese);
         Assertions.assertEquals(expected, actual);
     }
 
@@ -54,10 +62,12 @@ public class StatsServiceTest {
     public void searchOverAverageSales() {
         StatsService service = new StatsService();
 
+        int[] salese = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
+
 
         int expected = 5;
 
-        int actual = service.getOverAverageSaleseAmount();
+        int actual = service.getOverAverageSaleseAmount(salese);
         Assertions.assertEquals(expected, actual);
     }
 
@@ -65,10 +75,12 @@ public class StatsServiceTest {
     public void searchUnderAverageSales() {
         StatsService service = new StatsService();
 
+        int[] salese = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
+
 
         int expected = 7;
 
-        int actual = service.getUnderAverageSaleseAmount();
+        int actual = service.getUnderAverageSaleseAmount(salese);
         Assertions.assertEquals(expected, actual);
     }
 }

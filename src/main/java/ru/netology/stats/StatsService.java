@@ -2,9 +2,9 @@ package ru.netology.stats;
 
 public class StatsService {
 
-    public int getSaleseAmount() {
+    public int getSaleseAmount(int[] salese) {
 
-        int[] salese = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
+
         int saleseAmount = 0;
         for (int i = 0; i < salese.length; i++) {
             saleseAmount = saleseAmount + salese[i];
@@ -12,8 +12,8 @@ public class StatsService {
         return saleseAmount;
     }
 
-    public int getAverageSaleseAmount() {
-        int[] salese = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
+    public int getAverageSaleseAmount(int[] salese) {
+
         int saleseAmount = 0;
         for (int i = 0; i < salese.length; i++) {
             saleseAmount = saleseAmount + salese[i];
@@ -23,8 +23,8 @@ public class StatsService {
         return averageSalesAmount;
     }
 
-    public int getMaxMount() {
-        int[] salese = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
+    public int getMaxMount(int[] salese) {
+
         int maxMount = 0;
         for (int i = 0; i < salese.length; i++) {
             if (salese[i] >= salese[maxMount]) {
@@ -37,8 +37,8 @@ public class StatsService {
 
     }
 
-    public int getMinMount() {
-        int[] salese = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
+    public int getMinMount(int[] salese) {
+
         int minMount = 0;
         for (int i = 0; i < salese.length; i++) {
             if (salese[i] <= salese[minMount]) {
@@ -49,9 +49,9 @@ public class StatsService {
         return minMount + 1;
     }
 
-    public int getOverAverageSaleseAmount() {
-        int[] salese = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
-        int averageSalesAmount = getAverageSaleseAmount();
+    public int getOverAverageSaleseAmount(int[] salese) {
+
+        int averageSalesAmount = getAverageSaleseAmount(salese);
         int overAverageSaleseAmount = 0;
         for (int j = 0; j < salese.length; j++)
 
@@ -63,9 +63,9 @@ public class StatsService {
     }
 
 
-    public int getUnderAverageSaleseAmount() {
-        int[] salese = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
-        int averageSalesAmount = getAverageSaleseAmount();
+    public int getUnderAverageSaleseAmount(int[] salese) {
+
+        int averageSalesAmount = getAverageSaleseAmount(salese);
         int underAverageSaleseAmount = 0;
         for (int j = 0; j < salese.length; j++)
 
